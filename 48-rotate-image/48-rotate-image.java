@@ -1,5 +1,6 @@
 class Solution {
     public void rotate(int[][] matrix) {
+        //Transponse
        for(int i=0;i<matrix.length;i++)
        {
            for(int j=i;j<matrix[0].length;j++)
@@ -13,6 +14,7 @@ class Solution {
            }
            
        }
+        //Swap elements
         for (int i = 0; i <matrix.length; i++) {
     int start = 0;
     int end = matrix.length - 1;
