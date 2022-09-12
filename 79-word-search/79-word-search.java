@@ -8,14 +8,13 @@ class Solution {
         int col=board[0].length;
         letters=word.toCharArray();
         matrix=board;
-         visited =new boolean[row][col];
         for(int i=0;i<row;i++)
         {
             for(int j=0;j<col;j++)
             {
                 if(matrix[i][j]==letters[0])
                 {
-                   
+                   visited =new boolean[row][col];
                     boolean res=dfs(i,j,0);
                     if(res==true)
                         return true;
