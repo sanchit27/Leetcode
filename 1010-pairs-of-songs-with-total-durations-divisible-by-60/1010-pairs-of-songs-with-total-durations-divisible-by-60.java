@@ -16,7 +16,7 @@ class Solution {
             if(remainder[0]%2==0)
             ans+= ((remainder[0]/2)*(remainder[0]-1));
             else
-                ans+= ((remainder[0])*(remainder[0]-1))/2;
+            ans+= ((remainder[0])*(remainder[0]-1))/2;
         }
         if(remainder[30]>0)
         {
