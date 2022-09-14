@@ -38,10 +38,10 @@ class Solution {
                     }
                 }
                 while(j+1<n && nums[j+1]==nums[j])
-                            ++j;
+                            j++;
             }
               while(i+1<n && nums[i+1]==nums[i])
-                            ++i;
+                        i++;
         }
         return res;
     }
