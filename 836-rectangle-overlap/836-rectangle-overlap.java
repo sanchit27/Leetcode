@@ -11,9 +11,7 @@ class Solution {
         int x4= rec2[2];
         int y4= rec2[3];
         
-       // if(x1==x2||y1==y2||x3==x4||y3==y4)
-            //return false;
-        if(x1<x4 && y1<y4 && x2>x3 && y2>y3)
+        if(rec1[0]<rec2[2] && rec1[1]<rec2[3] && rec1[2]>rec2[0] && rec1[3]>rec2[1])
             return true;
         
         return false;
