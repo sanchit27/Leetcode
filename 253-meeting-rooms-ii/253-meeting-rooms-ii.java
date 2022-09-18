@@ -14,8 +14,9 @@ class Solution {
         int room=0;
         for(int i=0;i<start.length;i++)
         {
+            // If there is a meeting that has ended by the time the meeting at `start` starts
             if(start[i]<end[j])
-                room ++;
+                room ++; //
             else
                 j++;
         }
