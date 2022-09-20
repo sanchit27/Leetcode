@@ -1,20 +1,19 @@
 class Solution {
     public int jump(int[] nums) {
-        
-        int count=0;
-        int start=0;
-        int end=0;
-        
+        int c=0;
+        int s=0;
+        int e=0;
         for(int i=0;i<nums.length-1;i++)
         {
-            end= Math.max(end,i+nums[i]);
-            if(i==start)
+            e=Math.max(e,i+nums[i]);
+            
+            if(i==s)
             {
-                count++;
-                start=end;
+                c++;
+                s=e;
             }
         }
-        return count;
+        return c;
         
     }
 }
