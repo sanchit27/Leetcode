@@ -22,6 +22,7 @@ class Solution {
             val[0]=1;
             return val;
         }
-       throw new IllegalArgumentException("No format");
+      // throw new IllegalArgumentException("No format");
+         return digits;
     }
 }
