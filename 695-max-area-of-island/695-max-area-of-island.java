@@ -11,12 +11,12 @@ class Solution {
         if(grid[i][j]==0 || vis[i][j])
             return 0;
         vis[i][j]=true;
-        int ans=0;
+        int ans=1;
         for(int d=0;d<4;d++)
         {
             ans+=findArea(grid,vis,i+di[d],j+dj[d]);
         }
-        return ans+1;
+        return ans;
     }
     public int maxAreaOfIsland(int[][] grid) {
        int m=grid.length;
