@@ -1,8 +1,8 @@
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> res= new ArrayList<>();
-        //List<Integer> ans= new ArrayList<>();
-        findsubset(nums,0,new ArrayList<>(),res);
+        List<Integer> ans= new ArrayList<>();
+        findsubset(nums,0,ans,res);
         return res;
     }
     public void findsubset(int nums[],int i,List<Integer> ans,List<List<Integer>> res)
