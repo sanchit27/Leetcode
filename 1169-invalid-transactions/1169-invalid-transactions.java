@@ -24,7 +24,7 @@ class Solution {
           List<String> output = new ArrayList<>();
         for(int i = 0; i < trans.length; i++) {
             for(int j = 0; j < trans.length; j++) {
-               // if(i == j) continue;
+                if(i != j) {
                 if(trans[i].name.equals(trans[j].name) && 
                    Math.abs(trans[i].time-trans[j].time)<=60 && 
                    trans[i].city.equals(trans[j].city) == false) {
@@ -33,6 +33,7 @@ class Solution {
                 } else if(trans[i].amount > 1000) {
                     output.add(trans[i].toString());
                     break;
+                }
                 }
             }
         }
