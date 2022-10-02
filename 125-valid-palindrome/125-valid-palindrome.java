@@ -7,10 +7,9 @@ class Solution {
         System.out.println(s.length());
         int j=s.length()-1;
         int i=0;
-        if(s.length()==0)
+        if(s.length()==0||s.length()==1)
             return true;
-        if(s.length()==1)
-            return true;
+    
         while(i!=j)
         {if(i<=j)
         {
