@@ -16,8 +16,7 @@ class Solution {
         }
         if(n<0 && n%2==-1)
         {
-            int pos= -n;
-            double val=myPow(x,(pos)/2);
+            double val=myPow(x,-(n/2));
             System.out.println(val);
             return 1/(x*val*val);    
         }
