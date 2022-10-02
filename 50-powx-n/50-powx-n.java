@@ -22,7 +22,6 @@ class Solution {
         }
         if(n<0 && n%2==0)
         {
-            int pos= -n;
             double val=myPow(x,-(n/2));
             return 1/(val*val);    
         }
