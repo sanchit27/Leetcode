@@ -9,6 +9,7 @@ class Solution {
     }
     public void findsubset(int i,int nums[],List<List<Integer>> res,List<Integer> ans)
     {
+         res.add(new ArrayList<>(ans));
         
         for(int j=i;j<nums.length;j++)
         {
@@ -16,7 +17,7 @@ class Solution {
             findsubset(j+1,nums,res,ans);
             ans.remove(ans.size()-1);
         }
-        res.add(new ArrayList<>(ans));
+       
         
     }
 }
