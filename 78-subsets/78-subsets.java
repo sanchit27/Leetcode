@@ -2,7 +2,6 @@ class Solution {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> res= new ArrayList<>();
         List<Integer> ans= new ArrayList<>();
-        Arrays.sort(nums);
         findsubset(0,nums,res,ans);
         return res;
         
