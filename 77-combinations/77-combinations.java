@@ -10,7 +10,7 @@ public void combinations(int start, int n,int k,List<Integer> ans,List<List<Inte
     {
         if(ans.size()==k)
             res.add(new ArrayList<>(ans));
-        for(int i=start;i<=n && ans.size()<k;i++)
+        for(int i=start;i<=n;i++)
         {
             ans.add(i);
             combinations(i+1,n,k,ans,res);
