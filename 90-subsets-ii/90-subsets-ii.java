@@ -8,7 +8,7 @@ class Solution {
     }
     public void subsetstwo(List<List<Integer>> res,List<Integer> ans, int nums[],int start)
     {
-          res.add(new ArrayList<>(ans));
+          //res.add(new ArrayList<>(ans));
         for(int i=start;i<nums.length;i++)
         {
             if(i>start && nums[i]==nums[i-1])
@@ -17,6 +17,6 @@ class Solution {
             subsetstwo(res,ans,nums,i+1);
             ans.remove(ans.size()-1);
         }
-       // res.add(new ArrayList<>(ans));
+        res.add(new ArrayList<>(ans));
     }
 }
