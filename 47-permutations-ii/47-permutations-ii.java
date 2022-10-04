@@ -16,8 +16,8 @@ class Solution {
         {
             if(vis[i])
                 continue;
-            if(i>0 && nums[i]==nums[i-1] && vis[i-1])
-                continue;
+            //if(i>0 && nums[i]==nums[i-1] && vis[i-1])
+               // continue;
             vis[i]=true;
             ans.add(nums[i]);
             permutationstwo(res,ans,nums,vis);
