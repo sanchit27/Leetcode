@@ -7,8 +7,8 @@ class Solution {
     }
     public void permutationstwo(List<List<Integer>> res,List<Integer> ans,int nums[], boolean vis[])
     {
-        if(ans.size()==nums.length)
-        {if(!res.contains(ans))
+        if(ans.size()==nums.length && !res.contains(ans))
+        {
         res.add(new ArrayList<>(ans));
         }
 
