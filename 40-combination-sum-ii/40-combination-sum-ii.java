@@ -21,7 +21,7 @@ class Solution {
             ans.remove(ans.size()-1);
             
         }
-        if(target==0 && !res.contains(ans))
+        if(target==0)
             res.add(new ArrayList<>(ans));
             
         
