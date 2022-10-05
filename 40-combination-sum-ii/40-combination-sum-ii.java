@@ -15,13 +15,13 @@ class Solution {
         for(int i=start;i<candidates.length;i++)
         {
             if(i>start && candidates[i]==candidates[i-1])
-                continue;
+                continue; //remove duplicates
             ans.add(candidates[i]);
             combinationSumtwo(res,ans,target-candidates[i],candidates,i+1);
             ans.remove(ans.size()-1);
             
         }
-        if(target==0)
+        if(target==0 && !res.contains(ans))
             res.add(new ArrayList<>(ans));
             
         
