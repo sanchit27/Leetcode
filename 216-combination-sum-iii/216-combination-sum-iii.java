@@ -1,13 +1,12 @@
 class Solution {
-    
     public List<List<Integer>> combinationSum3(int k, int n) {
         List<List<Integer>> res= new ArrayList<>();
         List<Integer> ans= new ArrayList<>();
-        combinationSumThree(n,k,1,ans,n,res);
+        combinationSumThree(res,ans,k,n,1,n);
         return res;
         
     }
-    public void combinationSumThree(int n,int k ,int start,List<Integer> ans,int sum,List<List<Integer>> res)
+    public void combinationSumThree(List<List<Integer>> res,List<Integer> ans, int k,int n,int start,int sum)
     {
    
           if(sum==0 && ans.size()==k)
@@ -18,7 +17,7 @@ class Solution {
         {
            
             ans.add(i);
-            combinationSumThree(n, k, i + 1, ans, sum - i,res);
+            combinationSumThree(res,ans,k,n,i+1,sum-i);
             ans.remove(ans.size()-1);
             
         }
