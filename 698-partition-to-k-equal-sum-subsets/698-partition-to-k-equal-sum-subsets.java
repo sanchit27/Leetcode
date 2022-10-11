@@ -1,6 +1,7 @@
 class Solution {
     public boolean canPartitionKSubsets(int[] nums, int k) {
         int total = 0;
+        Arrays.sort(nums);
         for(int el: nums){
             total+=el;
         }
