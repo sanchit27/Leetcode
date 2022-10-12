@@ -21,7 +21,7 @@ class Solution {
      public int unique(String currentStr) {
       int[] count = new int[26];
         for(char c : currentStr.toCharArray()) 
-        { if(++count[ c - 'a']> 1) return -1;}
+        { if(count[ c - 'a']++> 0) return -1;}
            return currentStr.length();
       
     }
