@@ -5,7 +5,7 @@ class Solution {
         char c[]=str.toCharArray();
         for(char ch: c)
         {
-            if(freq[ch-'a'])
+            if(freq[ch-'a']==true)
                 return false;
             else
                 freq[ch-'a']=true;
