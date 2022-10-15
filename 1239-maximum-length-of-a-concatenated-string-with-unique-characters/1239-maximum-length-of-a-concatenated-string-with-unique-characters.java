@@ -1,8 +1,8 @@
 class Solution {
     private boolean unique(String str)
     {
-        if(str.length()>26)
-            return false;
+        //if(str.length()>26)
+            //return false;
         int freq[]= new int[26];
         char c[]=str.toCharArray();
         for(char ch:c)
