@@ -1,28 +1,41 @@
 class Solution {
-    public int maxLength(List<String> arr) {
-        int result[]= new int[1];
-        getMaxLength(0,arr,"",result);
-        return result[0];
-        
-    }
-    public void getMaxLength(int index,List<String> arr,String str,int [] length)
+    private boolean unique(String str)
     {
-        if(index==arr.size())
+        if(str.length()>26)
+            return false;
+        int freq[]= new int[26];
+        char c[]=str.toCharArray();
+        for(char ch:c)
         {
-            if(unique(str)>length[0])
-                length[0]=str.length();
+            freq[ch-'a']++;
+            if(freq[ch-'a']>1)
+                return false;
+        }
+        return true;
+    }
+    public int maxLength(List<String> arr) {
+        List<String> res= new ArrayList<>();
+        res.add("");
+        for(String str:arr)
+        {
+            if(!unique(str))
+            continue;
+            List<String> reswithappendedstring= new ArrayList<>();
+            for(String result:res)
+            {
+                String temp=result+str;
+                if(unique(temp))
+                    reswithappendedstring.add(temp);
+            }
             
-                return;
+            res.addAll(reswithappendedstring);
+            System.out.println(res);
             
         }
-        getMaxLength(index+1,arr,str,length);
-        getMaxLength(index+1,arr,str+arr.get(index),length);
-    }
-     public int unique(String currentStr) {
-      int[] count = new int[26];
-        for(char c : currentStr.toCharArray()) 
-        { if(++count[ c - 'a']> 1) return -1;}
-           return currentStr.length();
-      
+        int ans=0;
+        for(String r:res)
+           ans= Math.max(ans,r.length());
+        return ans;
+        
     }
 }
