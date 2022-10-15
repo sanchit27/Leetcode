@@ -1,15 +1,14 @@
 class Solution {
     private boolean unique(String str)
     {
-        //if(str.length()>26)
-            //return false;
-        int freq[]= new int[26];
+        boolean freq[]= new boolean[26];
         char c[]=str.toCharArray();
-        for(char ch:c)
+        for(char ch: c)
         {
-            freq[ch-'a']++;
-            if(freq[ch-'a']>1)
+            if(freq[ch-'a'])
                 return false;
+            else
+                freq[ch-'a']=true;
         }
         return true;
     }
@@ -19,23 +18,23 @@ class Solution {
         for(String str:arr)
         {
             if(!unique(str))
-            continue;
-            List<String> reswithappendedstring= new ArrayList<>();
-            for(String result:res)
+                continue;
+            List<String> resappended= new ArrayList<>();
+            for(String c:res)
             {
-                String temp=result+str;
+                String temp=c+str;
                 if(unique(temp))
-                    reswithappendedstring.add(temp);
+                    resappended.add(temp);
             }
-            
-            res.addAll(reswithappendedstring);
-            System.out.println(res);
+            res.addAll(resappended);
             
         }
         int ans=0;
-        for(String r:res)
-           ans= Math.max(ans,r.length());
+        for(String val:res)
+            ans=Math.max(ans,val.length());
+        
         return ans;
+            
         
     }
 }
