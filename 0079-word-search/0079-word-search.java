@@ -1,9 +1,7 @@
 class Solution {
     
-    boolean[][] visited;
+ 
     public boolean exist(char[][] board, String word) {
-        //int row= board.length;
-        //int col=board[0].length;
         boolean[][] visited=new boolean[board.length][board[0].length];;
     
         for(int i=0;i<board.length;i++)
