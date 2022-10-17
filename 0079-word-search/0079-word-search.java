@@ -30,11 +30,9 @@ class Solution {
         //Base cases
         if(index==letter.length)
             return true;
-        if(row<0 || row>=matrix.length||col<0 || col>=matrix[0].length||matrix[row][col]!=letter[index])
+        if(row<0 || row>=matrix.length||col<0 || col>=matrix[0].length||matrix[row][col]!=letter[index]||visited[row][col])
             return false;
     
-       
-        if(visited[row][col] == true) return false;
         
         visited[row][col]=true;
         //Main Cases
