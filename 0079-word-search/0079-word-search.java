@@ -1,11 +1,11 @@
 class Solution {
-    char[][] matrix;
-    char[] letter;
+    
     boolean[][] visited;
     public boolean exist(char[][] board, String word) {
         int row= board.length;
         int col=board[0].length;
-        letter=word.toCharArray();
+        boolean[][] visited=new boolean[row][col];;
+        //letter=word.toCharArray();
        // matrix=board;
         for(int i=0;i<board.length;i++)
         {
@@ -14,7 +14,7 @@ class Solution {
                 if(board[i][j]==word.charAt(0))
                 {
                     visited= new boolean[row][col];
-                    boolean res=dfs(i,j,0,word,board);
+                    boolean res=dfs(i,j,0,word,board,visited);
                     if(res==true)
                         return true;
                     
@@ -25,7 +25,7 @@ class Solution {
         return false;
         
     }
-    private boolean dfs(int row, int col, int index, String word,char[][] board )
+    private boolean dfs(int row, int col, int index, String word,char[][] board,boolean[][] visited)
     {
         //Base cases
         if(index==word.length())
@@ -41,7 +41,7 @@ class Solution {
         int dcol[]={0,1,0,-1};
         for(int i=0;i<drow.length;i++)
         {
-       if(dfs(row-drow[i], col-dcol[i], index+1,word,board))
+       if(dfs(row-drow[i], col-dcol[i], index+1,word,board,visited))
            return true;
         }
         
