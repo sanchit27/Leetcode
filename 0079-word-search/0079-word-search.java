@@ -2,18 +2,17 @@ class Solution {
     
     boolean[][] visited;
     public boolean exist(char[][] board, String word) {
-        int row= board.length;
-        int col=board[0].length;
-        boolean[][] visited=new boolean[row][col];;
-        //letter=word.toCharArray();
-       // matrix=board;
+        //int row= board.length;
+        //int col=board[0].length;
+        boolean[][] visited=new boolean[board.length][board[0].length];;
+    
         for(int i=0;i<board.length;i++)
         {
             for(int j=0;j<board[0].length;j++)
             {
                 if(board[i][j]==word.charAt(0))
                 {
-                    visited= new boolean[row][col];
+                    visited= new boolean[board.length][board[0].length];
                     boolean res=dfs(i,j,0,word,board,visited);
                     if(res==true)
                         return true;
