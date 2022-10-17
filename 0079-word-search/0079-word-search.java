@@ -11,7 +11,6 @@ class Solution {
                 if(board[i][j]==word.charAt(0))
                 {
                    if(dfs(i,j,0,word,board,visited))
-                    //if(res==true)
                         return true;
                     
                 }
