@@ -10,7 +10,7 @@ class Solution {
             {
                 if(board[i][j]==word.charAt(0))
                 {
-                    visited= new boolean[board.length][board[0].length];
+                    //visited= new boolean[board.length][board[0].length];
                     boolean res=dfs(i,j,0,word,board,visited);
                     if(res==true)
                         return true;
