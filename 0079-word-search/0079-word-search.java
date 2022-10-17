@@ -45,10 +45,9 @@ class Solution {
            return true;
         }
         
-       // boolean ans= top||down||left||right;
-       // if(ans == false){
+      
            visited[row][col] = false;
-       // }
+
         return false;
     }
 }
