@@ -6,15 +6,15 @@ class Solution {
         int row= board.length;
         int col=board[0].length;
         letter=word.toCharArray();
-        matrix=board;
-        for(int i=0;i<row;i++)
+       // matrix=board;
+        for(int i=0;i<board.length;i++)
         {
-            for(int j=0;j<col;j++)
+            for(int j=0;j<board[0].length;j++)
             {
-                if(matrix[i][j]==letter[0])
+                if(board[i][j]==word.charAt(0))
                 {
                     visited= new boolean[row][col];
-                    boolean res=dfs(i,j,0);
+                    boolean res=dfs(i,j,0,word,board);
                     if(res==true)
                         return true;
                     
@@ -25,12 +25,12 @@ class Solution {
         return false;
         
     }
-    private boolean dfs(int row, int col, int index )
+    private boolean dfs(int row, int col, int index, String word,char[][] board )
     {
         //Base cases
-        if(index==letter.length)
+        if(index==word.length())
             return true;
-        if(row<0 || row>=matrix.length||col<0 || col>=matrix[0].length||matrix[row][col]!=letter[index]||visited[row][col])
+        if(row<0 || row>=board.length||col<0 || col>=board[0].length||board[row][col]!=word.charAt(index)||visited[row][col])
             return false;
     
         
@@ -41,7 +41,7 @@ class Solution {
         int dcol[]={0,1,0,-1};
         for(int i=0;i<drow.length;i++)
         {
-       if(dfs(row-drow[i], col-dcol[i], index+1))
+       if(dfs(row-drow[i], col-dcol[i], index+1,word,board))
            return true;
         }
         
