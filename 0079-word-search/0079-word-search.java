@@ -1,4 +1,7 @@
 class Solution {
+    
+        int drow[]={-1,0,1,0};
+        int dcol[]={0,1,0,-1};
     public boolean exist(char[][] board, String word) {
        boolean[][] visited = new boolean[board.length][board[0].length];
         for(int i=0;i<board.length;i++)
@@ -22,8 +25,6 @@ class Solution {
         if(sr<0||sc<0||sr>=board.length||sc>=board[sr].length||board[sr][sc]!=word.charAt(count)||visited[sr][sc])
             return false;
         
-        int drow[]={-1,0,1,0};
-        int dcol[]={0,1,0,-1};
         visited[sr][sc]=true;
         for(int i=0;i<drow.length;i++)
         {
