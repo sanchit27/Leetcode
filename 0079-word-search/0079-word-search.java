@@ -1,6 +1,6 @@
 class Solution {
-    
- 
+     int drow[]={-1,0,1,0};
+        int dcol[]={0,1,0,-1};
     public boolean exist(char[][] board, String word) {
         boolean[][] visited=new boolean[board.length][board[0].length];;
     
@@ -34,8 +34,7 @@ class Solution {
         visited[row][col]=true;
         //Main Cases
         
-        int drow[]={-1,0,1,0};
-        int dcol[]={0,1,0,-1};
+       
         for(int i=0;i<drow.length;i++)
         {
        if(dfs(row-drow[i], col-dcol[i], index+1,word,board,visited))
