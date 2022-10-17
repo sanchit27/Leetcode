@@ -30,12 +30,10 @@ class Solution {
         //Base cases
         if(index==letter.length)
             return true;
-        if(row<0 || row>=matrix.length)
+        if(row<0 || row>=matrix.length||col<0 || col>=matrix[0].length||matrix[row][col]!=letter[index])
             return false;
-         if(col<0 || col>=matrix[0].length)
-            return false;
-        if(matrix[row][col]!=letter[index])
-            return false;
+    
+       
         if(visited[row][col] == true) return false;
         
         visited[row][col]=true;
