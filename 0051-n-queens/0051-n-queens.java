@@ -67,7 +67,22 @@ class Solution {
     public void helper(char board[][],List<List<String>> res,int col)
     {
         if(col==board.length)
-        { saveBoard(board,res);
+        { String row="";
+        List<String> newBoard= new ArrayList<>();
+        for(int i=0;i<board.length;i++)
+        {
+            row="";
+             for(int j=0;j<board[0].length;j++)
+             {
+                 if(board[i][j]=='Q')
+                     row+='Q';
+                     else
+                         row+='.';
+             }
+            newBoard.add(row);
+            
+        }
+        res.add(newBoard);
          return;
         }
         for(int row=0;row<board.length;row++)
