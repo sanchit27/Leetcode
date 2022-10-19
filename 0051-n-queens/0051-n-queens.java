@@ -44,42 +44,24 @@ class Solution {
         }
         return true;
     }
-    public void saveBoard(char board[][],List<List<String>> res)
-    {
-        String row="";
-        List<String> newBoard= new ArrayList<>();
-        for(int i=0;i<board.length;i++)
-        {
-            row="";
-             for(int j=0;j<board[0].length;j++)
-             {
-                 if(board[i][j]=='Q')
-                     row+='Q';
-                     else
-                         row+='.';
-             }
-            newBoard.add(row);
-            
-        }
-        res.add(newBoard);
-        
-    }
+    
     public void helper(char board[][],List<List<String>> res,int col)
     {
-        if(col==board.length)
-        { String row="";
+       
         List<String> newBoard= new ArrayList<>();
+        if(col==board.length)
+        { 
         for(int i=0;i<board.length;i++)
         {
-            row="";
+            String r="";
              for(int j=0;j<board[0].length;j++)
              {
                  if(board[i][j]=='Q')
-                     row+='Q';
+                     r+='Q';
                      else
-                         row+='.';
+                         r+='.';
              }
-            newBoard.add(row);
+            newBoard.add(r);
             
         }
         res.add(newBoard);
