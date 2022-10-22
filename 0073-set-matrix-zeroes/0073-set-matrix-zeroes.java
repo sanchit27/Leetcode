@@ -18,10 +18,11 @@ class Solution {
             {
                 if(mat[i][j])
                 {
+                    for(int row = 0; row < matrix.length; ++row)
+                         matrix[row][j] = 0;
                      for(int col = 0; col < matrix[0].length; ++col)
                          matrix[i][col] = 0;
-                     for(int row = 0; row < matrix.length; ++row)
-            matrix[row][j] = 0;
+                     
                 }
             }
         }
