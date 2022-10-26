@@ -12,9 +12,6 @@ class Solution {
             if(nums[i]==2)
                 two++;
         }
-        System.out.println(zero);
-        System.out.println(one);
-        System.out.println(two);
         for(int i=0;i<zero;i++)
             nums[i]=0;
          for(int i=zero;i<zero+one;i++)
