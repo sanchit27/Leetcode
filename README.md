@@ -1,5 +1,5 @@
 # Leetcode
-Solutions of leetcoide problem in optimised way!
+Solutions of leetcode problem in optimised way!
 ```
 Created By:
 Sanchit Bhargava
