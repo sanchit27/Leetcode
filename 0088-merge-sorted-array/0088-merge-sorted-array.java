@@ -1,9 +1,10 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int x=m+n;
         m--;
         n--;
        
-        for(int i=nums1.length-1;i>=0;i--)
+        for(int i=x-1;i>=0;i--)
         {
             if(n<0)
                 return;
