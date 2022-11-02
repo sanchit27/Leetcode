@@ -5,10 +5,7 @@ class Solution {
             return false;
         for(int i=0;i<s.length();i++)
         {
-            //if(map.containsKey(s.charAt(i)))
-            {
                 map.put(s.charAt(i),map.getOrDefault(s.charAt(i),0)+1);
-            }
         }
         for(int i=0;i<t.length();i++)
         {
