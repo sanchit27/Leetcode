@@ -15,13 +15,17 @@
  */
 class Solution {
     
-    
     public String tree2str(TreeNode root) {
         if(root==null) 
             return "";
+        
+         StringBuffer sb=new StringBuffer();
+        sb.append(root.val);
         if(root.left==null && root.right==null) 
-            return Integer.toString(root.val);
-        StringBuffer sb=new StringBuffer(Integer.toString(root.val));
+        { return Integer.toString(root.val);
+        }
+        
+   
        
         if(root.left==null&&root.right!=null||root.left!=null){
             sb.append("(");
