@@ -22,7 +22,8 @@ class Solution {
         if(root.left==null && root.right==null) 
             return Integer.toString(root.val);
         StringBuffer sb=new StringBuffer(Integer.toString(root.val));
-        if( root.left==null ||  root.left!=null){
+       
+        if(root.left==null&&root.right!=null||root.left!=null){
             sb.append("(");
             sb.append(tree2str(root.left));
             sb.append(")");
