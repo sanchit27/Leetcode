@@ -12,9 +12,7 @@ class Solution {
         }
         for(int i=0;i<t.length();i++)
         {
-            if(!map.containsKey(t.charAt(i)))
-                return false;
-                else
+            if(map.containsKey(t.charAt(i)))
             {
               int x=map.get(t.charAt(i));
                 if(x==1)
@@ -22,7 +20,8 @@ class Solution {
                     else
                         map.put(t.charAt(i),map.get(t.charAt(i))-1);
                 
-            }
+            }else
+                return false;
         }
         return true;
     
