@@ -30,7 +30,7 @@ class Solution {
     }
 
     private String helper(int num) {
-        if (num >= 1000000000) return (helper(num / 1000000000) + " Billion " + helper(num % 1000000000));
+        if (num >= 1000000000) return (helper(num / 1000000000) + " Billion " + helper(num % 1000000000)).trim();
         if (num >= 1000000) return (helper(num / 1000000) + " Million " + helper(num % 1000000)).trim();
         if (num >= 1000) return (helper(num / 1000) + " Thousand " + helper(num % 1000));
         if (num >= 100) return (helper(num / 100) + " Hundred " + helper((num % 100))).trim();
