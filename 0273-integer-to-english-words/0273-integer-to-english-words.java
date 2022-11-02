@@ -35,7 +35,7 @@ class Solution {
         if (num >= 1000) return (helper(num / 1000) + " Thousand " + helper(num % 1000)).trim();
         if (num >= 100) return (helper(num / 100) + " Hundred " + helper((num % 100))).trim();
         if (num >= 20) return (tens[num / 10] + " " + helper(num % 10)).trim();
-        if (num >= 1) return ones[num];
+        if (num >= 1) return ones[num].trim();
 
         return "";
     }
