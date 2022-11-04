@@ -44,7 +44,7 @@ class Solution {
         vis[0]=true;
         while(!q.isEmpty())
         {
-            Integer node= q.poll();
+            int node= q.poll();
             bfs.add(node);
             
             for(Integer it:adj.get(node))
