@@ -72,7 +72,7 @@ class Solution
         boolean vis[] = new boolean[V];
         Arrays.fill(vis,false);
         int parent[] = new int[V];
-        Arrays.fill(parent,-1);  
+        //Arrays.fill(parent,-1);  
         
         for(int i=0;i<V;i++)
             if(vis[i]==false) 
