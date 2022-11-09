@@ -31,7 +31,14 @@ class GFG {
 }
 // } Driver Code Ends
 
-
+class Node {
+    int first;
+    int second;
+    public Node(int first, int second) {
+        this.first = first;
+        this.second = second; 
+    }
+}
 class Solution
 {
    static boolean checkForCycle(ArrayList<ArrayList<Integer>> adj, int s,
@@ -84,12 +91,5 @@ class Solution
     
 }
    
-class Node {
-    int first;
-    int second;
-    public Node(int first, int second) {
-        this.first = first;
-        this.second = second; 
-    }
-}
+
 
