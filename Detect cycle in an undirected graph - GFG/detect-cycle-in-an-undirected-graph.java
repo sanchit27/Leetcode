@@ -70,7 +70,7 @@ class Solution
     public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj)
     {
         boolean vis[] = new boolean[V];
-        Arrays.fill(vis,false);
+        //Arrays.fill(vis,false);
         int parent[] = new int[V];
         //Arrays.fill(parent,-1);  
         
