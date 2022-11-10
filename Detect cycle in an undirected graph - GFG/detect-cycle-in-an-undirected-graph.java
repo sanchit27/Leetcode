@@ -44,32 +44,29 @@ class Solution
    static boolean checkForCycle(ArrayList<ArrayList<Integer>> adj, int s,
             boolean vis[], int parent[])
     {
-       Queue<Node> q =  new LinkedList<>(); //BFS
-       q.add(new Node(s, -1));
-       vis[s] =true;
        
-       // until the queue is empty
+       Queue<Node> q= new LinkedList<>();
+       q.add(new Node(s,-1));
+       vis[s]=true;
+       
        while(!q.isEmpty())
        {
-           // source node and its parent node
-           int node = q.peek().first;
+           //int node=q.peek().first();
+          // int par=q.peek().second();
+             int node = q.peek().first;
            int par = q.peek().second;
-           q.remove(); 
+           q.poll();
            
-           // go to all the adjacent nodes
-           for(Integer it: adj.get(node))
+           for(int i=0;i<adj.get(node).size();i++)
            {
-               if(vis[it]==false)  
+               if(!vis[adj.get(node).get(i)])
                {
-                   q.add(new Node(it, node));
-                   vis[it] = true; 
+                   q.add(new Node(adj.get(node).get(i),node));
+                   vis[adj.get(node).get(i)]=true;
                }
-        
-                // if adjacent node is visited and is not its own parent node
-               else if(par != it) return true;
+               else if(par != adj.get(node).get(i)) return true;
            }
        }
-       
        return false;
     }
     
