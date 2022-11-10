@@ -51,8 +51,7 @@ class Solution
        
        while(!q.isEmpty())
        {
-
-             int node = q.peek().first;
+           int node = q.peek().first;
            int par = q.peek().second;
            q.poll();
            
