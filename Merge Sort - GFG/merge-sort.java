@@ -59,7 +59,7 @@ class Solution
 {
     void merge(int arr[], int l, int m, int r)
     {
-         int n1 = m - l + 1;
+         int n1 = m  -l+ 1;
         int n2 = r - m;
  
         /* Create temp arrays */
@@ -81,14 +81,14 @@ class Solution
         int k = l;
         while (i < n1 && j < n2) {
             if (L[i] <= R[j]) {
-                arr[k] = L[i];
-                i++;
+                arr[k++] = L[i++];
+                //i++;
             }
             else {
-                arr[k] = R[j];
-                j++;
+                arr[k++] = R[j++];
+                //j++;
             }
-            k++;
+            //k++;
         }
  
         /* Copy remaining elements of L[] if any */
