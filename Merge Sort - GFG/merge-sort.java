@@ -113,7 +113,7 @@ class Solution
         
           if (l < r) {
             // Find the middle point
-            int m = l + (r - l) / 2;
+            int m = (l + r) / 2;
  
             // Sort first and second halves
             mergeSort(arr, l, m);
